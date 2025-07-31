@@ -30,7 +30,10 @@ function displayHREmployees() {
 }
 
 // Step 5: Find employee by ID
-function findEmployeeById(employeeId) {
+function searchEmployeeById() {
+  const input = document.getElementById('employeeIdInput').value;
+  const employeeId = parseInt(input); // Convert to number
+
   const foundEmployee = employees.find(employee => employee.id === employeeId);
   if (foundEmployee) {
     document.getElementById('employeesDetails').innerHTML =
@@ -39,6 +42,7 @@ function findEmployeeById(employeeId) {
     document.getElementById('employeesDetails').innerHTML = 'No employee has been found with this ID';
   }
 }
+
 
 // Practice Task: Display by specialization
 function displayBySpecialization(specialization) {
